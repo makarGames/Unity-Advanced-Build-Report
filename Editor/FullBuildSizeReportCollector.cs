@@ -52,7 +52,7 @@ namespace DetPanda.Editor.FullBuildSizeReport
             return result;
         }
 
-        internal static FullBuildSizeReportEntry GetOrCreate(
+        public static FullBuildSizeReportEntry GetOrCreate(
             Dictionary<string, FullBuildSizeReportEntry> byPath,
             string assetPath)
         {
@@ -68,7 +68,7 @@ namespace DetPanda.Editor.FullBuildSizeReport
             return created;
         }
 
-        internal static void AddUnique(List<string> list, string value)
+        public static void AddUnique(List<string> list, string value)
         {
             if (string.IsNullOrEmpty(value))
                 return;
@@ -77,7 +77,7 @@ namespace DetPanda.Editor.FullBuildSizeReport
             list.Add(value);
         }
 
-        internal static bool IsProjectAssetPath(string path)
+        public static bool IsProjectAssetPath(string path)
         {
             return path.StartsWith("Assets/", StringComparison.OrdinalIgnoreCase)
                    || path.StartsWith("Packages/", StringComparison.OrdinalIgnoreCase);
