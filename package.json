@@ -1,0 +1,26 @@
+{
+  "name": "com.makargames.build-size-explorer",
+  "version": "1.0.0",
+  "displayName": "Build Size Explorer",
+  "description": "Advanced build size analyzer combining Player BuildReport and Addressables Build Layout into a single view.",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/makarGames/Unity-Advanced-Build-Report#readme",
+  "changelogUrl": "https://github.com/makarGames/Unity-Advanced-Build-Report/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/makarGames/Unity-Advanced-Build-Report/blob/main/LICENSE",
+  "keywords": [
+    "build",
+    "size",
+    "report",
+    "addressables",
+    "buildreport",
+    "editor",
+    "analysis",
+    "optimization"
+  ],
+  "author": {
+    "name": "Makar Games",
+    "url": "https://github.com/makarGames"
+  },
+  "license": "MIT",
+  "type": "tool"
+}
