@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.AddressableAssets.Build.Layout;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEngine;
@@ -10,6 +11,15 @@ using UnityEngine.AddressableAssets;
 namespace DetPanda.Editor.FullBuildSizeReport
 {
 #if USE_ADDRESSABLES
+    [InitializeOnLoad]
+    internal static class FullBuildSizeReportAddressablesBootstrap
+    {
+        static FullBuildSizeReportAddressablesBootstrap()
+        {
+            FullBuildSizeReportAddressablesHook.Collect = FullBuildSizeReportAddressablesCollector.Collect;
+        }
+    }
+
     /// <summary>
     /// Addressables Build Layout collection (compiled only when com.unity.addressables is installed).
     /// </summary>

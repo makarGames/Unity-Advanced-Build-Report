@@ -1,6 +1,6 @@
 {
   "name": "com.makargames.build-size-explorer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Build Size Explorer",
   "description": "Advanced build size analyzer combining Player BuildReport and Addressables Build Layout into a single view.",
   "unity": "2022.3",

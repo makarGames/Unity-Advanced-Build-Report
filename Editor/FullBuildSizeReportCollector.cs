@@ -32,11 +32,15 @@ namespace DetPanda.Editor.FullBuildSizeReport
             var byPath = new Dictionary<string, FullBuildSizeReportEntry>(StringComparer.OrdinalIgnoreCase);
 
             CollectPlayerPackedAssets(result, byPath);
-#if USE_ADDRESSABLES
-            FullBuildSizeReportAddressablesCollector.Collect(result, byPath);
-#else
-            result.AddressablesReportStatus = "Addressables package not installed";
-#endif
+
+            if (FullBuildSizeReportAddressablesHook.Collect != null)
+            {
+                FullBuildSizeReportAddressablesHook.Collect(result, byPath);
+            }
+            else
+            {
+                result.AddressablesReportStatus = "Addressables package not installed";
+            }
 
             result.Entries.AddRange(byPath.Values);
             result.Entries.Sort((a, b) => b.PackedSizeBytes.CompareTo(a.PackedSizeBytes));
