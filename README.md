@@ -7,7 +7,7 @@ Advanced **Editor build size analyzer** that merges **Player BuildReport** packe
 
 Find what actually landed in your last build, filter by source, export CSV, and trace references down to scene hierarchy paths.
 
-![Demo](documentation/demo.gif)
+![Demo](documentation/56ebffd8-c87f-4ee0-8008-d8137d645569.jpg)
 
 ---
 
